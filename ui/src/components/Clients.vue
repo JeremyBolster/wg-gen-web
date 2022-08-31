@@ -370,6 +370,12 @@
                                         :rules="[ v => (/.+@.+\..+/.test(v) || v === '') || 'E-mail must be valid',]"
                                         required
                                 />
+                                <v-text-field
+                                        v-model="client.endpoint"
+                                        label="Static Endpoint"
+                                        :rules="[ v => (/.+:.+\.test(v) || v === '') || 'Endpoint must contain port',]"
+                                        required
+                                />
                                 <v-combobox
                                         v-model="client.address"
                                         chips
@@ -479,6 +485,7 @@
         { text: 'Name', value: 'name', },
         { text: 'Email', value: 'email', },
         { text: 'IP addresses', value: 'address', },
+        { text: 'Endpoint', value: 'endpoint', },
         { text: 'Tags', value: 'tags', },
         { text: 'Created', value: 'created', sortable: false, },
         { text: 'Updated', value: 'updated', sortable: false, },

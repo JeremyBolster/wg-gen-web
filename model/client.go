@@ -12,11 +12,13 @@ type Client struct {
 	Name                      string    `json:"name"`
 	Email                     string    `json:"email"`
 	Enable                    bool      `json:"enable"`
+	Endpoint                  string    `json:"endpoint"`
 	IgnorePersistentKeepalive bool      `json:"ignorePersistentKeepalive"`
 	PresharedKey              string    `json:"presharedKey"`
 	AllowedIPs                []string  `json:"allowedIPs"`
 	Address                   []string  `json:"address"`
 	Tags                      []string  `json:"tags"`
+	PersistentKeepalive       int       `json:"persistentKeepalive"`
 	PrivateKey                string    `json:"privateKey"`
 	PublicKey                 string    `json:"publicKey"`
 	CreatedBy                 string    `json:"createdBy"`
